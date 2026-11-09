@@ -1,0 +1,23 @@
+{
+  "proyecto": "",
+  "fecha_referencia": "2026-09-28",
+  "dias": [
+    { "dia": "lun", "personas": 6, "horas": 10 },
+    { "dia": "mar", "personas": 6, "horas": 10 },
+    { "dia": "mie", "personas": 6, "horas": 10 },
+    { "dia": "jue", "personas": 6, "horas": 10 },
+    { "dia": "vie", "personas": 6, "horas": 10 }
+  ],
+  "nombres_trabajadores": [],
+  "manejo": [
+    { "dia": "lun", "horas": 4, "descripcion": "outbound" },
+    { "dia": "vie", "horas": 4, "descripcion": "return" }
+  ],
+  "gasolina": 137,
+  "materiales": 161.21,
+  "comida": 600,
+  "otros_gastos": [],
+  "po": "",
+  "tarifa": 0,
+  "notas": []
+}

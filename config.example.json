@@ -1,0 +1,42 @@
+{
+  "zonaHoraria": "America/New_York",
+
+  "correo": {
+    "asunto": "Invoice {numero} - {empresa} - {proyecto} ({semana})"
+  },
+
+  "empresa": {
+    "nombre": "MAAI MULTISERVICES LLC",
+    "nombreCorto": "MAAI Multiservices LLC",
+    "eslogan": "Professional Cleaning Services",
+    "ubicacion": "Metro Atlanta, Georgia",
+    "telefono": "(770) 294-2348",
+    "email": "maaicleaning@gmail.com",
+    "servicios": "Commercial | Residential | Post-construction",
+    "logo": "assets/logo.png",
+    "firma": "Billing Department"
+  },
+
+  "factura": {
+    "prefijo": "INV",
+    "siguienteNumero": 51,
+    "servicio": "Labor",
+    "tarifaPorHora": 20,
+    "tarifaManejo": 20,
+    "supervisor": "NOMBRE DEL SUPERVISOR",
+    "enviadoPor": "NOMBRE DE QUIEN ENVIA",
+    "estado": "PENDING PAYMENT"
+  },
+
+  "proyectos": [
+    {
+      "nombre": "NOMBRE DEL PROYECTO",
+      "alias": [],
+      "nombreEnCorreo": "Nombre del Proyecto",
+      "direccion": "Direccion del proyecto, Ciudad, Estado",
+      "po": "",
+      "para": ["correo-del-cliente@ejemplo.com"],
+      "cc": []
+    }
+  ]
+}
