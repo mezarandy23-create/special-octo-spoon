@@ -1,0 +1,14 @@
+# Your business details printed on invoices and emails.
+# Copy this file to config/business.yaml and edit it there. business.yaml stays
+# on your server and is NOT uploaded to GitHub.
+
+company: MAAI Multiservices LLC
+email: maaicleaning@gmail.com
+phone: "(470) 709-1901"      # from your invoice template; your website shows (770) 294-2348. Pick one.
+website: https://www.maaiservice.com
+city: Norcross, GA
+address: ""                  # optional street address for the invoice header
+sent_by: ""                  # name printed after "Sent by:" on invoices
+labor_rate: 20.00            # dollars per hour
+overtime_multiplier: 1.5     # only used when you say a job had overtime hours
+google_review_link: ""       # used later by the client-messages agent

@@ -1,0 +1,22 @@
+[Unit]
+Description=MAAI AI office (Director + agents)
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=maai
+WorkingDirectory=/opt/maai
+Environment=HOME=/opt/maai/data/home
+ExecStart=/opt/maai/.venv/bin/python -m maai run
+Restart=always
+RestartSec=10
+# Hardening: the service can only write inside /opt/maai
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/maai
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target

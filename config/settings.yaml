@@ -1,0 +1,40 @@
+# MAAI office settings. No secrets here (those live in .env).
+
+# true  = PRACTICE: fake/test data, emails go only to you marked [TEST].
+# false = LIVE: real clients. Switch only after you've tried everything.
+dry_run: true
+
+timezone: America/New_York
+
+budget:
+  monthly_limit_usd: 25      # our own limit; you get warnings before reaching it
+  console_limit_usd: 30      # the hard limit you set in the Anthropic Console (keep it higher)
+  warn_at: [0.5, 0.8, 0.95]  # warn at 50%, 80%, 95%
+  per_task_max_usd: 0.50     # safety stop for any single agent run
+  essential_agents: [director, invoice]   # keep working even after the limit
+
+# Model per agent. Stronger models only where quality matters.
+agents:
+  director:
+    model: claude-sonnet-5-5
+    effort: low
+    max_turns: 8
+  invoice:
+    model: claude-haiku-5-5
+    effort: low
+    max_turns: 12
+
+invoices:
+  number_format: "INV-{year}-{seq:03d}"   # INV-2026-001 (practice: TEST-INV-2026-001)
+  payment_terms_days: 14                 # due date = invoice date + 14 days
+  first_reminder_after_days: 7           # first reminder 7 days after the due date
+  repeat_reminder_every_days: 7
+  max_reminders: 3
+
+schedule:
+  backup_time: "02:00"
+  reminder_check_time: "09:00"
+  backup_keep_days: 30
+
+voice:
+  model: base        # speech-to-text size: tiny, base, small (bigger = better, slower)
