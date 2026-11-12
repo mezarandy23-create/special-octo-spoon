@@ -5,6 +5,7 @@
 set -euo pipefail
 
 REPO_URL="${REPO_URL:-https://github.com/mezarandy23-create/special-octo-spoon.git}"
+BRANCH="${BRANCH:-main}"
 APP_DIR=/opt/maai
 
 echo "==> Installing system packages"
@@ -21,7 +22,7 @@ dpkg-reconfigure -f noninteractive unattended-upgrades
 echo "==> App user and folder"
 id maai >/dev/null 2>&1 || useradd --system --create-home --home-dir /home/maai --shell /usr/sbin/nologin maai
 if [ ! -d "$APP_DIR/.git" ]; then
-  git clone "$REPO_URL" "$APP_DIR"
+  git clone -b "$BRANCH" "$REPO_URL" "$APP_DIR"
 fi
 cd "$APP_DIR"
 python3 -m venv .venv

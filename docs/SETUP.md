@@ -43,8 +43,9 @@ Decide which Google account the agents use. Invoices will be emailed from it (fo
 4. Paste these two lines:
    ```bash
    apt-get update && apt-get install -y git
-   git clone https://github.com/mezarandy23-create/special-octo-spoon.git /opt/maai && bash /opt/maai/deploy/setup_server.sh
+   git clone -b claude/youthful-gauss-figcyw https://github.com/mezarandy23-create/special-octo-spoon.git /opt/maai && bash /opt/maai/deploy/setup_server.sh
    ```
+   (The new code is on the `claude/youthful-gauss-figcyw` branch until it's merged into `main`.)
    This installs everything, turns on the firewall and automatic security updates, and sets the office to start by itself.
 
 ## Step 5: Fill in your keys, about 10 min
